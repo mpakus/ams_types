@@ -1,5 +1,7 @@
 # AmsTypes
 
+[![CircleCI](https://circleci.com/gh/mpakus/ams_types.svg?style=svg)](https://circleci.com/gh/mpakus/ams_types)
+
 Ruby library adds Numeric types to ActiveModel::Serializers attributes.
 
 ## Installation
@@ -23,6 +25,8 @@ Or install it yourself as:
 Declare in your serializer class
 ```ruby
   class DataSerializer < ActiveModel::Serializer
+    include AMSTypes
+    
     attributes_integer :id
     attributes_float :price_usd, :price_btc
     ...
