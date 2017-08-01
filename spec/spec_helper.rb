@@ -2,6 +2,9 @@
 
 require 'bundler/setup'
 require 'ams_types'
+require 'active_model_serializers'
+require 'factories/data_source'
+require 'factories/data_serializer'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
