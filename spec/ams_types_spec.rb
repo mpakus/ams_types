@@ -21,4 +21,16 @@ RSpec.describe DataSerializer do
       it { expect(subject.price_btc).to eq 5050.5005 }
     end
   end
+
+  context 'with .attributes_boolean' do
+    describe '#available' do
+      it { expect(subject.available).to be_kind_of TrueClass }
+      it { expect(subject.available).to be_truthy }
+    end
+
+    describe '#denied' do
+      it { expect(subject.denied).to be_kind_of FalseClass }
+      it { expect(subject.denied).to be_falsey }
+    end
+  end
 end

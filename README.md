@@ -29,7 +29,8 @@ Declare in your serializer class
     
     attributes_integer :id
     attributes_float :price_usd, :price_btc
-    ...
+    attributes_boolean :available
+    # ...
   end
 ```
 

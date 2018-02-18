@@ -31,5 +31,14 @@ module AMSTypes
         end
       end
     end
+
+    def attributes_boolean(*attrs)
+      attrs.each do |attr|
+        attribute(attr) unless _attributes_data.fetch(attr, nil)
+        define_method(attr) do
+          object.send(attr.to_sym).to_s == 'true'
+        end
+      end
+    end
   end
 end

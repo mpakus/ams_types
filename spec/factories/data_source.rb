@@ -12,4 +12,12 @@ class DataSource
   def price_btc
     '5050.5005'
   end
+
+  def available
+    true
+  end
+
+  def denied
+    false
+  end
 end

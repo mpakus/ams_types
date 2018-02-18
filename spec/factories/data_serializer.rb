@@ -5,4 +5,5 @@ class DataSerializer < ActiveModel::Serializer
 
   attributes_integer :id
   attributes_float :price_usd, :price_btc
+  attributes_boolean :available, :denied
 end
